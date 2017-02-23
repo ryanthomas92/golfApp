@@ -2,8 +2,11 @@
   <h1>Pick a Course</h1>
 </div>
 
+
 <div class="collection">
-  <a href="#!" class="collection-item"><%= @cities_array.join("\n") %></a>
+  <% @cities_array.each do |city| %>
+  <a href="#!" class="collection-item"><%= city %></a>
+  <% end %>
 </div>
 
 

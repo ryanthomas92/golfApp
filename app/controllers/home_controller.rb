@@ -2,17 +2,15 @@ class HomeController < ApplicationController
   require 'rubygems'
   require 'nokogiri'
   require 'open-uri'
+  require 'json'
 
   def index
     page = Nokogiri::HTML(open("http://www.thegolfcourses.net/golfcourses/NJ/NewJersey.htm"))
-    courses = page.css('ol a')
-    @course_array = []
-    courses.map do |a|
+    cities = page.css('ol a')
+    @cities_array = []
+    cities.map do |a|
       course_name = a.text
-      @course_array.push(course_name)
-    end
-    @course_array.each do |i|
-      p @course_array
+      @cities_array.push(course_name)
     end
   end
 end

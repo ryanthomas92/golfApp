@@ -11,5 +11,8 @@ class HomeController < ApplicationController
       course_name = a.text
       @course_array.push(course_name)
     end
+    @course_array.each do |i|
+      p @course_array
+    end
   end
 end

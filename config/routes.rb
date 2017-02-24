@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: 'user'
   delete '/users/:id', to: 'users#destroy'
 
+  get '/courses', to: 'courses#index'
+  get '/courses/new', to: 'courses#new', as: 'new_course'
+  post '/courses', to: 'courses#create'
+  get '/courses/:id', to: 'courses#show', as: 'course'
+  delete '/courses/:id', to: 'courses#destroy'
+
 end

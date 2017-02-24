@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get '/courses/:id', to: 'courses#show', as: 'course'
   delete '/courses/:id', to: 'courses#destroy'
 
+  get '/login', to: 'sessions#new'
+
 end

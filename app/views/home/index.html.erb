@@ -2,12 +2,17 @@
   <h1>Pick a Course</h1>
 </div>
 
+<div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+      <% @cities_array.each do |city| %>
+        <option value="1"><%= city %></option>
+      <% end %>
+    </select>
+    <label>Select a City</label>
+  </div>
 
-<div class="collection">
-  <% @cities_array.each do |city| %>
-    <a href="#!" class="collection-item"><%= city %></a>
-  <% end %>
-</div>
+
 
 
 <!-- <ul class="collection">

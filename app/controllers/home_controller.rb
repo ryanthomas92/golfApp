@@ -9,8 +9,13 @@ class HomeController < ApplicationController
     cities = page.css('ol a')
     @cities_array = []
     cities.map do |a|
-      course_name = a.text
-      @cities_array.push(course_name)
+      city_name = a.text
+      @cities_array.push(city_name)
+    end
+    @cities_array.each do |el|
+      puts el
+      p "this is ELLLL"
+      city = Course.find_or_create_by(city: el)
     end
   end
 end

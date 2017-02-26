@@ -13,9 +13,13 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">GolfApp</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!-- <li><a href="#">Profile</a></li> -->
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign Up</a></li>
+        <% if current_user %>
+          <li><%= link_to "Profile", user_path(current_user) %></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        <% else %>
+          <li><%= link_to "Create Account", new_user_path %></li>
+          <li><%= link_to "Log In", login_path %></li>
+        <% end %>
       </ul>
     </div>
   </nav>

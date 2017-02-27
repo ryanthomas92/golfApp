@@ -1,7 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Course.destroy_all
+
+course_data = []
+
+  course_page = Nokogiri::HTML(open("https://www.golfmax.com/Golf-Courses/New-Jersey-Golf-Courses.shtml"))
+    courses = course_page.css('td a.navblue')
+    names_array = []
+    courses.map do |a|
+      course_name = a.text
+      names_array.push(course_name)
+    end
+      names_array[0..5].each do |el|
+        course_data << {
+          name: el,
+          state: 'NJ',
+          city: FFaker::Address.city,
+          public: FFaker::Boolean.random,
+          private: FFaker::Boolean.random,
+          municipal: FFaker::Boolean.random,
+          cost: "$40-$60",
+          phone: FFaker::PhoneNumber.short_phone_number
+        }
+    end
+
+Course.create(course_data)

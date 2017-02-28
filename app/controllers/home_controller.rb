@@ -6,5 +6,9 @@ class HomeController < ApplicationController
 
   def index
     @courses = Course.all
+    @course = Course.new
+  end
+
+  def new
   end
 end

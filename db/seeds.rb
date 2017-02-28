@@ -1,6 +1,5 @@
 Course.destroy_all
 
-course_data = []
 
   course_page = Nokogiri::HTML(open("https://www.golfmax.com/Golf-Courses/New-Jersey-Golf-Courses.shtml"))
     courses = course_page.css('td a.navblue')
@@ -9,6 +8,7 @@ course_data = []
       course_name = a.text
       names_array.push(course_name)
     end
+    course_data = []
       names_array[0..5].each do |el|
         course_data << {
           name: el,

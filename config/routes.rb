@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'home#index'
+  root to: 'courses#index'
 
   # get '/users', to: 'users#index'
   get '/users/new', to: 'users#new', as: 'new_user'
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/courses', to: 'courses#index'
   get '/courses/new', to: 'courses#new', as: 'new_course'
   post '/courses', to: 'courses#create'
+  get '/courses/search', to: 'courses#search'
   get '/courses/:id', to: 'courses#show', as: 'course'
   delete '/courses/:id', to: 'courses#destroy'
 

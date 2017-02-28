@@ -7,7 +7,7 @@
 
 <div class="section white">
     <div class="row container">
-      <%= form_tag({controller: "home", action: "index"}, method: "get") do %>
+      <%= form_tag({controller: "courses", action: "search"}, method: "get") do %>
         <h3>Select a City:</h3>
         <div class="input-field col s12">
           <%= select_tag(:city, options_for_select(@courses.map{ |c| [c.city]})) %>

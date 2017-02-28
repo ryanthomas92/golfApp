@@ -7,39 +7,27 @@
 
 <div class="section white">
     <div class="row container">
-
-      <div class="input-field col s12">
+      <%= form_tag(controller: "courses", action: "index", method: "get") %>
         <h3>Select a City:</h3>
-          <%= select_tag(:city, options_for_select(@courses.map{ |c| [c.city]}))%>
+        <div class="input-field col s12">
+          <%= select_tag(:city, options_for_select(@courses.map{ |c| [c.city]})) %>
       </div>
-
-
-      <!-- <form action="#">
-        <h3>Select the Course Type:</h3>
-        <p>
-          <input type="checkbox" id="test1" />
-          <label for="test1">Public</label>
-        </p>
-        <p>
-          <input type="checkbox" id="test2" />
-          <label for="test2">Private</label>
-        </p>
-        <p>
-          <input type="checkbox" id="test3" />
-          <label for="test3">Municipal</label>
-        </p>
-      </form> -->
-
+      <h3>Select a Course Type:</h3>
+      <div class="input-field col s12">
+          <%= check_box_tag(:public) %>
+          <%= label_tag(:public, "Public Golf Course") %>
+        </br>
+          <%= check_box_tag(:private) %>
+          <%= label_tag(:private, "Private Golf Course") %>
+        </br>
+          <%= check_box_tag(:municipal) %>
+          <%= label_tag(:municipal, "Municipal Golf Course") %>
+      </div>
+      <div class="input-field col s12">
+        <%= submit_tag("Search Courses", class: "btn") %>
+      </div>
     </div>
   </div>
-
-  <!-- <div class="input-field col s12">
-    <h3>Select a Course:</h3>
-    <select>
-      <option value="" disabled selected>Choose a Course</option>
-
-    </select>
-  </div> -->
 
 
   <div class="parallax-container">

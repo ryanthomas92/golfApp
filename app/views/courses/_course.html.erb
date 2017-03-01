@@ -1,11 +1,15 @@
-Here are all of the courses in <%= course.city %>, <%= course.state %>
-</br>
-
-<%= course.name %>
-<%= course.city %>
-<%= course.state %>
-<%= course.cost %>
-<%= course.phone %>
-<%= course.public %>
-<%= course.private %>
-<%= course.municipal %>
+<div class="row">
+      <div class="col s12">
+        <h3>Courses near <%= course.city %>, <%= course.state %></h3>
+        <div class="card-panel green darken-4">
+          <p>Course Name: <%= course.name %></p>
+          <p>Pro Shop Phone Number: <%= course.phone %></p>
+          <p>City: <%= course.city %></p>
+          <p>State: <%= course.state %></p>
+          <p>Average Green Fees: <%= course.cost %></p>
+          <p>Public Course: <%= yesno(course.public) %></p>
+          <p>Private Course: <%= yesno(course.private) %></p>
+          <p>Municipal Course: <%= yesno(course.municipal) %></p>
+        </div>
+      </div>
+    </div>

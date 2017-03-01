@@ -1,3 +1,34 @@
 <div>
   Welcome, <%= @user.first_name %>!
 </div>
+<div class="row">
+  <!-- PROFILE INFO -->
+  <section class="col s6 offset-s3 m3 offset-m1">
+    <div class="card">
+      <div class="card-content teal white-text">
+        <p>
+          Name:
+          <%= @user.first_name %>
+          <%= @user.last_name %>
+        </p>
+        <p>
+          Date joined:
+          <%= @user.created_at %>
+        </p>
+        <p>
+          Email:
+          <%= @user.email %>
+        </p>
+        <p>
+          Username:
+          <%= @user.username %>
+        </p>
+        <p>
+          Favorite Courses:
+          <%= @user.favorite_courses %>
+        </p>
+
+
+      </div>
+    </div>
+  </div>

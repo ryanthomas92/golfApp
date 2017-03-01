@@ -10,7 +10,7 @@
       <%= form_tag({controller: "courses", action: "search"}, method: "get") do %>
         <h3>Select a City:</h3>
         <div class="input-field col s12">
-          <%= select_tag(:city, options_for_select(@courses.map{ |c| [c.city]})) %>
+          <%= select_tag(:city, options_for_select(@courses.map{ |c| [c.city]}.sort)) %>
       </div>
       <h3>Select a Course Type:</h3>
       <div class="input-field col s12">

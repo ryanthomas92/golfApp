@@ -9,7 +9,7 @@ Course.destroy_all
       names_array.push(course_name)
     end
     course_data = []
-      names_array[0..5].each do |el|
+      names_array[0..100].each do |el|
         course_data << {
           name: el,
           state: 'NJ',

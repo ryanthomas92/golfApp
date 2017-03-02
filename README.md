@@ -1,6 +1,6 @@
 # README
 
-# FINDmE
+# Pin-Seeker
 
 * Project Description
 
@@ -60,10 +60,31 @@ way more than you expected. Pin-Seeker works to eliminate these issues.
 <%= submit_tag("Search Courses", class: "btn green darken-4") %>
 <% end %>
 ```
+``` ruby
+def search
+  @courses = Course.all
+  if params[:city]
+    @courses = Course.search(params[:city])
+  else
+    @courses = Course.all
+  end
+  puts params
+end
+```
+``` ruby
+course_page = Nokogiri::HTML(open("https://www.golfmax.com/Golf-Courses/New-Jersey-Golf-Courses.shtml"))
+  courses = course_page.css('td a.navblue')
+  names_array = []
+  courses.map do |a|
+    course_name = a.text
+    names_array.push(course_name)
+  end
+```
 
 * Wish List / Future Development
 
-
+## Entity-Relationship Diagram
+![alt text](app/assets/images/wireframe1.jpg)
 * Links
 Wireframes:
 Database Relationships

@@ -1,15 +1,18 @@
-<div class="row">
-      <div class="col s12">
-        <h3>Courses near <%= course.city %>, <%= course.state %></h3>
-        <div class="card-panel green darken-4">
-          <p>Course Name: <%= course.name %></p>
-          <p>Pro Shop Phone Number: <%= course.phone %></p>
-          <p>City: <%= course.city %></p>
-          <p>State: <%= course.state %></p>
-          <p>Average Green Fees: <%= course.cost %></p>
-          <p>Public Course: <%= yesno(course.public) %></p>
-          <p>Private Course: <%= yesno(course.private) %></p>
-          <p>Municipal Course: <%= yesno(course.municipal) %></p>
-        </div>
-      </div>
+<div class="course_container">
+
+<div class="row one">
+  <div class="col s6 offset-s3">
+    <h3 class= "center">Courses near <%= course.city %>, <%= course.state %></h3>
+    <div class="card-panel green darken-4">
+      <p class= "center">Course Name: <%= course.name %></p>
+      <p class= "center">Pro Shop Phone Number: <%= course.phone %></p>
+      <p class= "center">City: <%= course.city %></p>
+      <p class= "center">State: <%= course.state %></p>
+      <p class= "center">Average Green Fees: <%= course.cost %></p>
+      <p class= "center">Public Course: <%= yesno(course.public) %></p>
+      <p class= "center">Private Course: <%= yesno(course.private) %></p>
+      <p class= "center">Municipal Course: <%= yesno(course.municipal) %></p>
     </div>
+  </div>
+</div>
+</div>

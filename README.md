@@ -2,7 +2,7 @@
 
 # Pin-Seeker
 
-* Project Description
+## Project Description
 
 The app that I developed is called Pin-Seeker. This is a mobile-friendly application
 that allows anyone to use a search form to look for golf courses in their area. The
@@ -11,7 +11,7 @@ burdensome experience. I want to give users a quick solution to that problem. Le
 users look for exactly what type of course they want, and how to get in contact with
 the Pro Shop.
 
-* User Stories
+## User Stories
 
 This application appeals to anyone who has a passion for playing golf. Since finding
 information about golf courses is difficult, this app will allow anyone to find a golf
@@ -20,7 +20,7 @@ round of golf. Navigating a new location is difficult enough. But what's more fr
 is finding a course you want to play, only to find out that it is a private course, or costs
 way more than you expected. Pin-Seeker works to eliminate these issues.
 
-* Technologies Used
+## Technologies Used
 
   - HTML
   - CSS
@@ -30,14 +30,14 @@ way more than you expected. Pin-Seeker works to eliminate these issues.
   - Nokogiri
   - Materialize.scss
 
-* Steps for Installation (Local)
+## Steps for Installation (Local)
   In the console...
 
   - bundle install
   - rails db:setup
   - rails server
 
-* Code I'm Proud Of
+## Code I'm Proud Of
 ``` ruby
 <div class="row container">
   <%= form_tag({controller: "courses", action: "search"}, method: "get") do %>
@@ -81,11 +81,22 @@ course_page = Nokogiri::HTML(open("https://www.golfmax.com/Golf-Courses/New-Jers
   end
 ```
 
-* Wish List / Future Development
+## Wish List / Future Development
+There is a lot that I was not able to complete in the first week working on this
+project. Firstly, I was only able to incorporate all of the web scraped data into
+my database. So my first step is trying to relate all of the web scraped data together.
+Then what I want to do with this project is let users follow each other and develop
+some functionality to let users store favorite courses and post their score cards. There
+is a lot of development that can be added to the back end of this project, but having a
+working search function is a great start.
+
+## Wireframes
+![alt text](app/assets/images/wireframe1.jpg)
+![alt text](app/assets/images/wireframe2.jpg)
 
 ## Entity-Relationship Diagram
-![alt text](app/assets/images/wireframe1.jpg)
-* Links
-Wireframes:
-Database Relationships
+![alt text](app/assets/images/database.jpg)
+
+## Links
 Heroku: https://mysterious-bastion-17458.herokuapp.com/
+GitHub: https://github.com/ryanthomas92/golfApp

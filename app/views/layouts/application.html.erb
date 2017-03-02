@@ -11,14 +11,14 @@
 <body>
   <nav>
     <div class="nav-wrapper green darken-4">
-      <%= link_to "GolfApp", root_path, class: "brand-logo left" %>
+      <%= link_to "Pin-Seeker", root_path, class: "brand-logo left logofont" %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <% if current_user %>
-        <li><%= link_to "Profile", user_path(current_user) %></li>
-        <li><%= link_to "Log Out", logout_path %></li>
+        <li><%= link_to "Profile", user_path(current_user), class: "font" %></li>
+        <li><%= link_to "Log Out", logout_path, class: "font" %></li>
         <% else %>
-        <li><%= link_to "Create Account", new_user_path %></li>
-        <li><%= link_to "Log In", login_path %></li>
+        <li><%= link_to "Create Account", new_user_path, class: "font" %></li>
+        <li><%= link_to "Log In", login_path, class: "font" %></li>
         <% end %>
       </ul>
     </div>

@@ -1,5 +1,5 @@
 <% if @courses.present? %>
-  <%= render partial: "course", collection: @courses %>
+<%= render partial: "course", collection: @courses %>
 <% else %>
-  <p>There are no courses containing the term(s) <%= params[:city] %>.</p>
+<p>There are no courses containing the term(s) <%= params[:city] %>.</p>
 <% end %>

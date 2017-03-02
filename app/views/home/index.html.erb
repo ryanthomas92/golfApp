@@ -6,33 +6,33 @@
 </div>
 
 <div class="section white">
-    <div class="row container">
-      <%= form_tag({controller: "home", action: "index"}, method: "get") do %>
-        <h3>Select a City:</h3>
-        <div class="input-field col s12">
-          <%= select_tag(:city, options_for_select(@courses.map{ |c| [c.city]})) %>
-      </div>
-      <h3>Select a Course Type:</h3>
-      <div class="input-field col s12">
-          <%= check_box_tag(:public) %>
-          <%= label_tag(:public, "Public Golf Course") %>
-        </br>
-          <%= check_box_tag(:private) %>
-          <%= label_tag(:private, "Private Golf Course") %>
-        </br>
-          <%= check_box_tag(:municipal) %>
-          <%= label_tag(:municipal, "Municipal Golf Course") %>
-      </div>
-      <div class="input-field col s12">
-        <%= submit_tag("Search Courses", class: "btn") %>
-        <% end %>
-      </div>
+  <div class="row container">
+    <%= form_tag({controller: "home", action: "index"}, method: "get") do %>
+    <h3>Select a City:</h3>
+    <div class="input-field col s12">
+      <%= select_tag(:city, options_for_select(@courses.map{ |c| [c.city]})) %>
     </div>
-  </div>
+    <h3>Select a Course Type:</h3>
+    <div class="input-field col s12">
+      <%= check_box_tag(:public) %>
+      <%= label_tag(:public, "Public Golf Course") %>
+    </br>
+    <%= check_box_tag(:private) %>
+    <%= label_tag(:private, "Private Golf Course") %>
+  </br>
+  <%= check_box_tag(:municipal) %>
+  <%= label_tag(:municipal, "Municipal Golf Course") %>
+</div>
+<div class="input-field col s12">
+  <%= submit_tag("Search Courses", class: "btn") %>
+  <% end %>
+</div>
+</div>
+</div>
 
 
-  <div class="parallax-container">
-    <div class="parallax">
-      <%= image_tag "footer.jpg" %>
-    </div>
+<div class="parallax-container">
+  <div class="parallax">
+    <%= image_tag "footer.jpg" %>
   </div>
+</div>

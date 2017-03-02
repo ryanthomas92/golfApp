@@ -1,12 +1,6 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// .one {
-//   background-image: url("http://www.donajuliagolf.es/wp-content/themes/donajulia/images/propias/full/green-hoyo-2-dona_julia_golf_costa_del_sol.jpg");
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
 
 .course_container {
   background-image: url("http://www.donajuliagolf.es/wp-content/themes/donajulia/images/propias/full/green-hoyo-2-dona_julia_golf_costa_del_sol.jpg");
@@ -15,6 +9,33 @@
   background-size: cover;
   height: 100vh;
   width: 100%;
+}
+.attone {
+  margin-top: 5%;
+}
+.atttwo {
+  margin-top: 10%;
+}
+
+.attthree {
+  margin-top: 10%;
+}
+
+.attfour {
+  margin-top: 10%;
+}
+.card-panel {
+  height: 70vh;
+  opacity: .95;
+}
+
+.center {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: white;
+}
+
+.bottom {
+  margin-top: -2%;
 }
 
 h3 {
